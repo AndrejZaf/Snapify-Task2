@@ -1,0 +1,21 @@
+.col-md-4 {
+  text-align: center;
+  cursor: pointer;
+}
+
+/* .thumbnailImage {
+  width: 100%;
+} */
+
+.row {
+  margin-top: 20px;
+}
+
+.figure-img {
+  max-width: 150px;
+  max-height: 150px;
+}
+
+.col-md-4 {
+  cursor: default;
+}

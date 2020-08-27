@@ -1,0 +1,104 @@
+<app-loading-spinner *ngIf="showSpinner"></app-loading-spinner>
+<div class="container">
+  <form novalidate (ngSubmit)="save()" [formGroup]="imageForm">
+    <div class="form-group row mb-2">
+      <label class="col-md-2 col-form-label" for="title">Album Id</label>
+      <div class="col-md-8">
+        <input
+          class="form-control"
+          id="albumId"
+          type="text"
+          formControlName="albumId"
+          [ngClass]="{
+            'is-invalid':
+              (imageForm.get('albumId').touched ||
+                imageForm.get('albumId').dirty) &&
+              !imageForm.get('albumId').valid
+          }"
+        />
+        <span class="invalid-feedback">
+          <span *ngIf="imageForm.get('albumId').errors?.required">
+            Album ID field is required
+          </span>
+          <span *ngIf="imageForm.get('albumId').errors?.pattern">
+            Only numeric values are accepted!
+          </span>
+        </span>
+      </div>
+    </div>
+    <div class="form-group row mb-2">
+      <label class="col-md-2 col-form-label" for="title">Title</label>
+      <div class="col-md-8">
+        <input
+          class="form-control"
+          id="title"
+          type="text"
+          formControlName="title"
+          [ngClass]="{
+            'is-invalid':
+              (imageForm.get('title').touched ||
+                imageForm.get('title').dirty) &&
+              !imageForm.get('title').valid
+          }"
+        />
+        <span class="invalid-feedback">
+          <span *ngIf="imageForm.get('title').errors?.required">
+            Please enter a valid title
+          </span>
+        </span>
+      </div>
+    </div>
+    <div class="form-group row mb-2">
+      <label class="col-md-2 col-form-label" for="url">URL</label>
+      <div class="col-md-8">
+        <input
+          class="form-control"
+          id="url"
+          type="text"
+          formControlName="url"
+          id="url"
+          [ngClass]="{
+            'is-invalid':
+              (imageForm.get('url').touched || imageForm.get('url').dirty) &&
+              !imageForm.get('url').valid
+          }"
+        />
+        <span class="invalid-feedback">
+          <span *ngIf="imageForm.get('url').errors?.required">
+            Please enter an image URL
+          </span>
+        </span>
+      </div>
+    </div>
+    <div class="form-group row mb-2">
+      <label class="col-md-2 col-form-label" for="url">Thumbnail URL</label>
+      <div class="col-md-8">
+        <input
+          class="form-control"
+          id="thumbnailUrl"
+          type="text"
+          formControlName="thumbnailUrl"
+          [ngClass]="{
+            'is-invalid':
+              (imageForm.get('thumbnailUrl').touched ||
+                imageForm.get('thumbnailUrl').dirty) &&
+              !imageForm.get('thumbnailUrl').valid
+          }"
+        />
+        <span class="invalid-feedback">
+          <span *ngIf="imageForm.get('thumbnailUrl').errors?.required">
+            Please enter an image URL for the thumbnail
+          </span>
+        </span>
+      </div>
+    </div>
+    <div class="form-group row mb-2">
+      <div class="offset-md-2 col-md-4">
+        <button class="btn btn-primary mr-3">Save</button>
+        <button class="btn btn-danger mr-3" [routerLink]="['/images']">
+          Go Back
+        </button>
+      </div>
+    </div>
+  </form>
+</div>

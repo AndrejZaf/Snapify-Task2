@@ -1,0 +1,65 @@
+<nav class="navbar navbar-expand-lg navbar-light bg-default py-3">
+  <a class="navbar-brand" [routerLink]="['/home']"
+    >Snapify<span class="colorLetter">X</span></a
+  >
+  <button
+    class="navbar-toggler"
+    type="button"
+    data-toggle="collapse"
+    data-target="#navbarSupportedContent"
+    aria-controls="navbarSupportedContent"
+    aria-expanded="false"
+    aria-label="Toggle navigation"
+  >
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+    <ul class="navbar-nav ml-auto">
+      <li *ngIf="authService.isLoggedIn" class="nav-item">
+        <button
+          [routerLink]="['/images/add']"
+          type="button"
+          class="btn btn-outline-danger"
+        >
+          Add New Post
+        </button>
+      </li>
+      <li class="nav-item">
+        <a
+          [routerLink]="['/images']"
+          routerLinkActive="active"
+          class="nav-link"
+          href="#"
+          >Feed
+        </a>
+      </li>
+      <li class="nav-item">
+        <a
+          *ngIf="authService.isLoggedIn"
+          [routerLink]="['user']"
+          routerLinkActive="active"
+          class="nav-link"
+          href="#"
+          >My Profile</a
+        >
+      </li>
+      <li class="nav-item">
+        <a
+          *ngIf="!authService.isLoggedIn"
+          class="nav-link"
+          routerLinkActive="active"
+          [routerLink]="['/user/login']"
+          >Sign In</a
+        >
+        <a
+          *ngIf="authService.isLoggedIn"
+          class="nav-link"
+          href="#"
+          (click)="logOut()"
+          >Sign Out</a
+        >
+      </li>
+    </ul>
+  </div>
+</nav>

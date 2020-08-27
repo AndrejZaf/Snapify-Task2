@@ -1,0 +1,39 @@
+.yellowLetter {
+  color: #f99404;
+}
+.masthead {
+  height: 90vh;
+  min-height: 500px;
+  background-image: url("../../assets/landingpage.png");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+.navbar-light .navbar-nav .nav-link:focus,
+.navbar-light .navbar-nav .nav-link:hover {
+  color: #fbab3c;
+}
+.colorLetter {
+  color: #f99404;
+}
+
+.btn-outline-danger:not(:disabled):not(.disabled).active,
+.btn-outline-danger:not(:disabled):not(.disabled):active,
+.show > .btn-outline-danger.dropdown-toggle {
+  color: #fff;
+  background-color: #fbab3c;
+  border-color: #fbab3c;
+}
+.btn-outline-danger {
+  color: #f99404;
+  border-color: #f99404;
+}
+.btn-outline-danger:hover {
+  color: #fff;
+  background-color: #f99404;
+  border-color: #f99404;
+}
+.btn-outline-danger.focus,
+.btn-outline-danger:focus {
+  box-shadow: 0 0 0 0.2rem #f99404;
+}

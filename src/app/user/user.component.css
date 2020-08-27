@@ -1,0 +1,13 @@
+.profile-head .nav-tabs {
+  margin-bottom: 5%;
+}
+.profile-head .nav-tabs .nav-link {
+  border: none;
+}
+.profile-head .nav-tabs .nav-link.active {
+  border: none;
+  border-bottom: 2px solid #f99404;
+}
+.profile-tab p {
+  color: #f99404;
+}

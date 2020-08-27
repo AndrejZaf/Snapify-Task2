@@ -1,0 +1,86 @@
+#notfound {
+  position: relative;
+  height: 80vh;
+}
+
+#notfound .notfound {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+}
+
+.notfound {
+  max-width: 767px;
+  width: 100%;
+  line-height: 1.4;
+  padding: 110px 40px;
+  text-align: center;
+  background: #fff;
+}
+
+.notfound .notfound-404 {
+  position: relative;
+  height: 180px;
+}
+
+.notfound .notfound-404 h1 {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  font-size: 165px;
+  font-weight: 700;
+  margin: 0px;
+  color: #262626;
+  text-transform: uppercase;
+}
+
+.notfound .notfound-404 h1 > span {
+  color: #f99404;
+}
+
+.notfound h2 {
+  font-size: 22px;
+  font-weight: 500;
+  text-transform: uppercase;
+  color: #151515;
+  margin-top: 0px;
+  margin-bottom: 25px;
+}
+
+@media only screen and (max-width: 767px) {
+  .notfound h2 {
+    font-size: 18px;
+  }
+}
+
+@media only screen and (max-width: 480px) {
+  .notfound .notfound-404 h1 {
+    font-size: 141px;
+  }
+}
+.btn-outline-danger:not(:disabled):not(.disabled).active,
+.btn-outline-danger:not(:disabled):not(.disabled):active,
+.show > .btn-outline-danger.dropdown-toggle {
+  color: #fff;
+  background-color: #fbab3c;
+  border-color: #fbab3c;
+}
+.btn-outline-danger {
+  color: #f99404;
+  border-color: #f99404;
+}
+.btn-outline-danger:hover {
+  color: #fff;
+  background-color: #f99404;
+  border-color: #f99404;
+}
+.btn-outline-danger.focus,
+.btn-outline-danger:focus {
+  box-shadow: 0 0 0 0.2rem #f99404;
+}

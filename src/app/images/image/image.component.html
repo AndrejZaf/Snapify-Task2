@@ -1,0 +1,38 @@
+<app-loading-spinner *ngIf="showSpinner"></app-loading-spinner>
+<div class="row mx-auto">
+  <div class="col-sm-4">
+    <a [routerLink]="['/images']"><i class="fas fa-times fa-2x"></i></a>
+  </div>
+  <div class="col-sm-4">
+    <a *ngIf="displayEditDelete()" [routerLink]="['/images/edit', image.id]">
+      <i class="far fa-edit fa-2x"></i>
+    </a>
+    <a
+      [routerLink]="['/images']"
+      (click)="deleteProduct()"
+      *ngIf="displayEditDelete()"
+      class="rightButton"
+    >
+      <i class="far fa-trash-alt fa-2x"></i>
+    </a>
+  </div>
+</div>
+<div class="col-sm-4"></div>
+<div class="jumbotron j1">
+  <div class="row">
+    <div class="col-sm-4"></div>
+    <div class="col-md-4 mx-auto">
+      <figure class="figure">
+        <img
+          src="{{ image.url }}"
+          class="figure-img img-fluid rounded"
+          alt="{{ image.title }}"
+        />
+        <figcaption class="figure-caption">
+          {{ image.title }}
+        </figcaption>
+      </figure>
+    </div>
+    <div class="col-sm-4"></div>
+  </div>
+</div>

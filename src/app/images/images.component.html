@@ -1,0 +1,31 @@
+<div class="container">
+  <h3>Latest Feed</h3>
+  <app-loading-spinner *ngIf="showSpinner"></app-loading-spinner>
+  <div *ngFor="let row of images3x3; let i = index">
+    <div *ngIf="i % 3 === 0" class="row">
+      <div *ngFor="let image of images3x3.slice(i, i + 3)" class="col-md-4">
+        <a
+          [routerLink]="['/images', image.id]"
+          routerLinkActive="router-link-active"
+        >
+          <figure class="figure">
+            <img
+              src="{{ image.thumbnailUrl }}"
+              class="figure-img img-fluid rounded"
+              alt="A generic square placeholder image with rounded corners in a figure."
+            />
+            <figcaption class="figure-caption text-left">
+              {{ image.title | customTitle }}
+            </figcaption>
+          </figure>
+        </a>
+      </div>
+    </div>
+  </div>
+  <div
+    infinite-scroll
+    [infiniteScrollDistance]="2"
+    [infiniteScrollThrottle]="1250"
+    (scrolled)="onScroll()"
+  ></div>
+</div>

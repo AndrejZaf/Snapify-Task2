@@ -1,0 +1,11 @@
+.rightButton {
+  float: right;
+}
+a {
+  color: black;
+}
+
+.jumbotron {
+  background-color: white;
+  padding-top: 0px;
+}

@@ -1,0 +1,60 @@
+<div class="container">
+  <div class="row">
+    <div class="col-md-6">
+      <div class="profile-head">
+        <h5>{{ currentUser.name }}</h5>
+        <ul class="nav nav-tabs">
+          <li class="nav-item">
+            <a class="nav-link active">About</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-md-8">
+      <div class="tab-content profile-tab" id="myTabContent">
+        <div class="row">
+          <div class="col-md-6">
+            <label>User Id</label>
+          </div>
+          <div class="col-md-6">
+            <p>{{ currentUser.id }}</p>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-md-6">
+            <label>Username</label>
+          </div>
+          <div class="col-md-6">
+            <p>{{ currentUser.username }}</p>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-md-6">
+            <label>Email</label>
+          </div>
+          <div class="col-md-6">
+            <p>{{ currentUser.email }}</p>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-md-6">
+            <label>Phone</label>
+          </div>
+          <div class="col-md-6">
+            <p>{{ currentUser.phone }}</p>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-md-6">
+            <label>Role</label>
+          </div>
+          <div class="col-md-6">
+            <p>{{ currentUser.role }}</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
